@@ -1,0 +1,43 @@
+theme = "onedark"
+
+[editor]
+scrolloff = 5
+mouse = false
+cursorline = true
+cursorcolumn = true
+auto-completion = true
+auto-format = true
+bufferline = "multiple"
+color-modes = true
+clipboard-provider = "wayland"
+auto-pairs = false
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-absolute-path"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = true
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+nnbsp = "␣"
+tab = "→"
+newline = "⏎"
+tabpad = "·"
+
+[keys.normal]
+R = ":toggle whitespace.render all none"
+n = ':set gutters.layout ["spacer"]'
+N = ':set gutters.layout ["line-numbers"]'

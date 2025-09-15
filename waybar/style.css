@@ -1,0 +1,132 @@
+@import "colors.css";
+* {
+  padding-left: 1px;
+  padding-right: 1px;
+  margin: 0px;
+  font-size: 14px;
+  font-family: "JetBrains Mono Nerd Font" ;
+  min-height: 0px;
+}
+window#waybar {
+  background-color: rgba(0, 0, 0, 100);
+  color: @text;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+tooltip {
+  border: 3px solid @text;
+  background-color: @base;
+}
+#custom-distro,
+#idle_inhibitor,
+#cpu,
+#memory,
+#battery,
+#backlight,
+#clock,
+#custom-notification,
+#pulseadio,
+#workspaces,
+#taskbar,
+#tray,
+#custom-distro {
+  background-color: @base;
+  color: @text;
+  padding-left: 13px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#idle_inhibitor {
+  background-color: @base;
+  color: @text;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#cpu {
+  background-color: @base;
+  color: @text;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#memory {
+  background-color: @base;
+  color: @text;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#battery{
+  background-color: @base;
+  color: @text;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#backlight {
+  background-color: @base;
+  color: @text;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#clock {
+  background-color: @base;
+  color: @text;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#custom-notification {
+  background-color: @base;
+  color: @text;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 5px;
+}
+#pulseaudio {
+  background-color: @base;
+  color: @text;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#workspaces button {
+    padding-right: 6px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+    color: @darkgrey;
+}
+#workspaces button.empty {
+  color: @grey;
+}
+#workspaces button.active {
+  color: @blue;
+}
+#workspaces button:hover {
+  color: @orange;
+  border: 0px solid @base;
+}
+#taskbar {
+  background-color: @base;
+  padding: 1px;
+  border-radius: 8px;
+}
+#taskbar button {
+  padding: 2px;
+  border: 1px solid @darkgrey;
+  background-color: @base;
+  color: @darkgrey;
+}
+#taskbar button.active {
+  border: 3px solid @blue;
+  background-color: @grey;
+  color: @text;
+}
+#tray {
+  background-color: @base;
+  padding-right: 5px;
+}

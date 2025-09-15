@@ -1,0 +1,91 @@
+* {
+  background-image: none;
+  font-size: 32px;
+  box-shadow: none;
+}
+
+
+window {
+  background-color: rgba(0,0,0, 0.50);
+}
+
+button {
+  border-radius:  10px;
+  border-color: #89b4fa;
+  text-decoration-color: #8c8c8c;
+  color: #ffffff;
+  background-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+button:hover {
+    background-color: rgba(0,0,0, 0.80);
+}
+
+button:hover#lock {
+    border-radius: 4px;
+    margin : 4px 0px 4px 0px;
+}
+
+button:hover#logout {
+    border-radius: 4px;
+    margin : 4px 0px 4px 0px;
+}
+
+button:hover#suspend {
+    border-radius: 4px;
+    margin : 4px 0px 4px 0px;
+}
+
+button:hover#shutdown {
+    border-radius: 4px;
+    margin : 4px 0px 4px 0px;
+}
+
+button:hover#reboot {
+    border-radius: 4px;
+    margin : 4px 0px 4px 0px;
+}
+
+button:hover#cancel {
+  border-radius: 4px;
+  margin : 4px 0px 4px 0px;
+}
+#lock {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/lock_w.png"));
+  border-radius: 5px 0px 0px 5px;
+  margin : 4px 0px 4px 4px;
+}
+
+#logout {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/logout_w.png"));
+  border-radius: 0px 0px 0px 0px;
+  margin : 4px 0px 4px 0px;
+}
+
+#suspend {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/suspend_w.png"));
+  border-radius: 0px 0px 0px 0px;
+  margin : 4px 0px 4px 0px;
+}
+
+#shutdown {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/shutdown_w.png"));
+  border-radius: 0px 0px 0px 0px;
+  margin : 4px 0px 4px 0px;
+}
+
+#reboot {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/reboot_w.png"));
+  border-radius: 0px 5px 5px 0px;
+  margin : 4px 4px 4px 0px;
+}
+#cancel {
+  background-image: image(url("/home/warrentyexpired/.config/wlogout/icons/cancel_w.png"));
+  border-radius: 0px 5px 5px 0px;
+  margin : 4px 4px 4px 0px;
+}

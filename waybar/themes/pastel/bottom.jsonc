@@ -1,0 +1,34 @@
+// -*- mode: jsonc -*-
+{
+    "spacing": 2,
+    "position": "bottom",
+    "modules-left": [ "niri/workspaces" ],
+    //"modules-center": [ "niri/window" ],
+    "modules-center": [ "wlr/taskbar" ],
+    "modules-right": [ ],
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "" 
+        },
+    },
+    //"niri/window": {
+    //	"format": "{title}",
+    //	"max-length": 30
+    //},
+  "wlr/taskbar": {
+        "format": "{icon} {title:.30}",
+        "icon-size": 16,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "active-first": "true",
+        "app_ids-mapping": {
+                "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+                "Firefox Web Browser": "Firefox",
+        }
+  }
+}

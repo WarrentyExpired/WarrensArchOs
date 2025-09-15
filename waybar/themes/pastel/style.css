@@ -1,0 +1,163 @@
+@import "mocha.css";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: "JetBrains Mono Nerd Font" ;
+    min-height: 0px;
+    
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 46, 0);
+    color: @text;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+tooltip {
+    border: 3px solid @blue;
+    background-color: @base;
+}
+
+#workspaces {
+    border: 3px solid @blue;
+}
+
+#workspaces button {
+    padding-right: 6px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: transparent;
+    color: @subtext0;
+}
+
+#workspaces button:hover {
+    color: @subtext1;
+}
+
+#workspaces button.empty {
+    color: @overlay1;
+}
+
+#workspaces button.active {
+    color: @text;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+
+#taskbar,
+#idle_inhibitor,
+#clock,
+#battery,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-media,
+#custom-distro,
+#tray,
+#custom-notification {
+  border: 3px solid @green;
+  background-color: @base;
+  padding: 0 10px;
+}
+#workspaces {
+    background-color: @base;
+    padding: 0 10px;
+    color: @text;
+    opacity: 1;
+}
+
+#clock {
+    border: 3px solid @yellow;
+    background-color: @base;
+}
+#taskbar {
+    border: 3px solid @blue;
+    background-color: @base;
+    padding: 1px;
+    color: @text;
+    border-radius: 8px;
+}
+#taskbar button{
+    padding: 0;
+    background-color: @base;
+    color: @text;
+}
+#taskbar button.active {
+    border: 2px solid @flamingo;
+    background-color: @base;
+    color: @text;
+}
+#idle_inhibitor {
+    background-color: @base;
+    border: 3px solid @blue;
+    padding-left: 3px;
+}
+
+#custom-distro {
+    background-color: @base;
+    border: 3px solid @green;
+    padding-right: 13px;
+}
+
+#battery {
+    background-color: @base;
+    border: 3px solid @rosewater;
+}
+
+#cpu {
+    background-color: @base;
+    border: 3px solid @peach;
+    padding-right: 15px
+}
+
+#memory {
+    background-color: @base;
+    border: 3px solid @maroon;
+}
+
+#backlight {
+    background-color: @base;
+    border: 3px solid @flamingo;
+}
+
+#custom-media.custom-vlc {
+    background-color: @base;
+    border: 3px solid @peach;
+}
+
+#custom-media.custom-firefox {
+    background-color: @base;
+    border: 3px solid @red;
+}
+
+#temperature {
+    background-color: @base;
+    border: 3px solid @red;
+}
+
+#tray {
+    background-color: @base;
+    border: 3px solid @maroon;
+}
+#backlight {
+    background-color: @base;
+    border: 3px solid @flamingo;
+}
+#pulseaudio {
+    background-color: @base;
+    border: 3px solid @pink;
+}

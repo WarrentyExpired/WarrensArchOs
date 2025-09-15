@@ -1,0 +1,40 @@
+@import "colors.css";
+* {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Cascadia Code" ;
+    min-height: 0px;
+}
+window#waybar {
+    background-color: rgba(30, 30, 46, 0);
+    color: @text;
+}
+
+window#waybar.hidden {
+    opacity: 0.80;
+}
+
+tooltip {
+    border: 3px solid @blue;
+    background-color: @base;
+}
+#taskbar,
+#taskbar {
+    border: 3px solid @blue;
+    background-color: @base;
+    padding: 1px;
+    color: @text;
+    border-radius: 8px;
+}
+#taskbar button{
+    padding: 5px;
+    background-color: @base;
+    color: @text;
+}
+#taskbar button.active {
+    border: 2px solid @orange;
+    background-color: @grey;
+    color: @text;
+}
