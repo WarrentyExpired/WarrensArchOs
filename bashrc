@@ -2,7 +2,7 @@
 # Exports
 ##########
 export DOTNET_ROOT=$HOME/.dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:$HOME/bin
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools:$HOME/bin:$HOME/.local/bin
 
 ##########
 # Disable Ctrl+d

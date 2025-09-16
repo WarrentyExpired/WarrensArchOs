@@ -1,0 +1,15 @@
+#Pacman
+firefox git github-cli unzip discord eza zoxide fastfestch terminator vlc mpv yazi
+
+# Install paru
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git
+cd paru
+makepkg -si
+
+# Nerdfont installer
+# https://github.com/getnf/getnf
+#curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
+
+#Aur 
+ironpython3 pokeget getnf
