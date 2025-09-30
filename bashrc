@@ -18,6 +18,7 @@ alias sshservarr="ssh warrentyexpired@192.168.88.101"
 alias sshdockers="ssh warrentyexpired@192.168.88.102"
 alias sshlive="ssh mementoadmin@uo-memento.com"
 alias sshproxy="ssh 192.168.88.200"
+alias sshvps="ssh 151.241.113.9"
 alias grep="grep --color=auto"
 alias rebuild="sudo nixos-rebuild switch --flake $HOME/NixOS/.#damagedProperty"
 

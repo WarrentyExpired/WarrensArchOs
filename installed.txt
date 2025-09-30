@@ -12,4 +12,4 @@ makepkg -si
 #curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
 
 #Aur 
-ironpython3 pokeget getnf
+ironpython3 pokeget getnf caffine-ng
