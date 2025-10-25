@@ -1,0 +1,98 @@
+{
+  "layer": "top",
+  "position": "bottom",
+  "height": 35,
+  "spacing": 4,
+  "exclusive": true,
+  "margin-bottom": 2,
+
+  "modules-left": ["niri/workspaces", "cpu", "memory", "temperature", "tray"],
+  "modules-center": ["niri/window"],
+  "modules-right": ["pulseaudio", "backlight", "network", "bluetooth", "custom/power", "clock"],
+
+  "niri/workspaces": {
+    "all-outputs": true,
+    "format": "{1}",
+    "format-icons": {
+      "default": "",
+      "active": "",
+      "urgent": ""
+    }
+  },
+
+  "niri/window": {
+    "format": "{}",
+    "max-length": 50
+  },
+
+  "cpu": {
+    "on-click": "flatpak run io.missioncenter.MissionCenter",
+    "format": "{usage}% ",
+    "tooltip": false
+  },
+  "memory": {
+    "on-click": "flatpak run io.missioncenter.MissionCenter",
+    "format": "{}% "
+  },
+  "temperature": {
+    "thermal-zone": 1,
+    "on-click": "flatpak run io.missioncenter.MissionCenter",
+    "format": "{temperatureC}°C ",
+    "critical-threshold": 80
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-muted": " {volume}%",
+    "format-icons": ["", "", ""],
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5% && notify-send -t 1000 'Volume' \"$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\\d+(?=%)' | head -1)%\"",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5% && notify-send -t 1000 'Volume' \"$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oP '\\d+(?=%)' | head -1)%\"",
+    "on-click": "pavucontrol",
+    "scroll-step": 5
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""],
+    "on-scroll-up": "brightnessctl set +5% && notify-send -t 1000 'Brightness' \"$(brightnessctl get | awk -v max=$(brightnessctl max) '{print int($1/max*100)}')%\"",
+    "on-scroll-down": "brightnessctl set 5%- && notify-send -t 1000 'Brightness' \"$(brightnessctl get | awk -v max=$(brightnessctl max) '{print int($1/max*100)}')%\"",
+    "scroll-step": 5
+  },
+
+  "network": {
+    "format-wifi": "{essid} ({signalStrength}%) ",
+    "format-ethernet": "{ipaddr}/{cidr} 󰊗",
+    "format-disconnected": "",
+    "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+    "tooltip-format-ethernet": "{ifname} ",
+    "tooltip-format-disconnected": "Disconnected",
+    "max-length": 50
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": true,
+    "on-click": "~/.local/bin/power-menu.sh",
+    "tooltip-format": "Power menu"
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%a, %d. %b  %H:%M}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  }
+}

@@ -1,0 +1,100 @@
+@import url("colors.css");
+@import url("theme.css");
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: Azeret Mono;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 0;
+  color: @main-fg;
+}
+
+window#waybar.bottom {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+#workspaces {
+  padding: 0 8px;
+  background: alpha(@main-bg, 0.3);
+  border-radius: 16px;
+  margin: 6px 0;
+}
+
+#workspaces button {
+  padding: 6px 14px;
+  margin: 4px 2px;
+  background: transparent;
+  color: @module-fg-on-dark;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  background: alpha(@hover-bg, 0.4);
+  color: @hover-fg;
+  box-shadow: 0 0 8px alpha(@hover-bg, 0.5);
+}
+
+#workspaces button.active {
+  background: alpha(@active-bg, 0.7);
+  color: @active-fg;
+  box-shadow: 0 0 10px alpha(@active-bg, 0.4);
+}
+
+#workspaces button.urgent {
+  background: alpha(@critical, 0.7);
+  color: @active-fg;
+  animation: urgent-pulse 1s infinite;
+}
+
+@keyframes urgent-pulse {
+  0% { box-shadow: 0 0 5px alpha(@critical, 0.5); }
+  50% { box-shadow: 0 0 15px alpha(@critical, 0.8); }
+  100% { box-shadow: 0 0 5px alpha(@critical, 0.5); }
+}
+
+.modules-left, .modules-center, .modules-right {
+  background: alpha(@main-bg, 0.3);
+  border-radius: 10px;
+  margin: 6px 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cpu, #memory, #temperature, #pulseaudio, #backlight, #network, #bluetooth, #clock, #custom-power, #window {
+  padding: 6px 14px;
+  margin: 4px 2px;
+  background: transparent;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+#cpu:hover, #memory:hover, #temperature:hover, #pulseaudio:hover, #backlight:hover, #network:hover, #bluetooth:hover, #clock:hover, #custom-power:hover, #window:hover {
+  background: alpha(@hover-bg, 0.4);
+  color: @hover-fg;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Module colors with subtle glow */
+#cpu { color: @cpu; text-shadow: 0 0 4px alpha(@cpu, 0.3); }
+#memory { color: @memory; text-shadow: 0 0 4px alpha(@memory, 0.3); }
+#temperature { color: @temperature; text-shadow: 0 0 4px alpha(@temperature, 0.3); }
+#pulseaudio { color: @pulseaudio; text-shadow: 0 0 4px alpha(@pulseaudio, 0.3); }
+#backlight { color: @backlight; text-shadow: 0 0 4px alpha(@backlight, 0.3); }
+#network { color: @sapphire; text-shadow: 0 0 4px alpha(@sapphire, 0.3); }
+#bluetooth { color: @teal; text-shadow: 0 0 4px alpha(@teal, 0.3); }
+#clock { color: @lavender; text-shadow: 0 0 4px alpha(@lavender, 0.3); }
+#custom-power { color: @red; text-shadow: 0 0 4px alpha(@red, 0.3); }
+#window { color: @mauve; text-shadow: 0 0 4px alpha(@mauve, 0.3); }
+
+tooltip label { 
+  color: @main-fg; 
+  background: alpha(@base, 0.95);
+  border: 1px solid @overlay0;
+  border-radius: 8px;
+  padding: 8px;
+}

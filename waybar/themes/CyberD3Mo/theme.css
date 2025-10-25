@@ -1,0 +1,66 @@
+
+@define-color rosewater       #d7d2d0;        /* Pywal bright white */
+@define-color flamingo        #d7d2d0;        /* Alias for consistency */
+@define-color pink            #A9A3A2;        /* Pywal bright magenta */
+@define-color mauve           #A9A3A2;         /* Pywal magenta */
+@define-color red             #3B6E8A;         /* Pywal red */
+@define-color maroon          #3B6E8A;         /* Pywal bright red */
+@define-color peach           #578DA7;        /* Pywal bright yellow (orangey) */
+@define-color yellow          #578DA7;         /* Pywal yellow */
+@define-color green           #4C7890;         /* Pywal green */
+@define-color teal            #B4B2B1;         /* Pywal cyan */
+@define-color sky             #B4B2B1;        /* Pywal bright cyan (light blue) */
+@define-color sapphire        #71A9C3;        /* Pywal bright blue */
+@define-color blue            #71A9C3;         /* Pywal blue */
+@define-color lavender        #4C7890;        /* Pywal bright green (repurposed accent) */
+
+@define-color text            #d7d2d0;
+@define-color subtext1        alpha(#d7d2d0, 0.90);
+@define-color subtext0        alpha(#d7d2d0, 0.65);
+
+@define-color overlay2        #d7d2d0;         /* Pywal white/light gray */
+@define-color overlay1        alpha(#d7d2d0, 0.8);
+@define-color overlay0        alpha(#d7d2d0, 0.6);
+
+@define-color surface2        alpha(#969391, 0.8);
+@define-color surface1        alpha(#969391, 0.6);
+@define-color surface0        #969391;         /* Pywal bright black / darkest gray */
+
+@define-color base            #050D0D;     /* Pywal main background */
+@define-color mantle          alpha(#050D0D, 0.85); /* Slightly lighter than base, good for inactive modules */
+@define-color crust           #050D0D;         /* Pywal black / darkest color */
+
+/* --- Main Colors --- */
+@define-color shadow          alpha(@crust, 0.5);
+@define-color main-fg         @text;
+@define-color main-bg         @base;
+@define-color main-br         @overlay0;
+
+/* --- Active/Hover Colors --- */
+@define-color active-bg       @mauve;
+@define-color active-fg       @crust;    /* Dark text for high contrast on a light/vibrant bg */
+@define-color hover-bg        @surface1;
+@define-color hover-fg        @text;
+
+
+@define-color module-fg-on-dark   @text;   /* Light text for modules on dark backgrounds */
+@define-color module-fg-on-color  @base;   /* Dark text for modules on colorful backgrounds */
+
+@define-color workspaces      @mantle;
+@define-color temperature     @maroon;
+@define-color memory          @green;
+@define-color cpu             @peach;
+@define-color distro-fg       @base;
+@define-color distro-bg       @rosewater;
+@define-color time            @lavender;
+@define-color date            @blue;
+@define-color tray            @mantle;  /* A dark background for wifi, bluetooth, etc. */
+@define-color pulseaudio      @teal;
+@define-color backlight       @yellow;
+@define-color battery         @sky;
+@define-color power           @red;     /* A distinct accent for the power button */
+
+/* --- State Colors --- */
+@define-color warning         @yellow;
+@define-color critical        @red;
+@define-color charging        @green;
