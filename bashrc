@@ -35,12 +35,6 @@ else
   echo "You may wanna install eza"
 fi
 
-if command -v pokeget &>/dev/null; then
-  alias fastfetchp='pokeget random --hide-name | fastfetch --file-raw -'
-else
-  echo "You may wanna install pokeget"
-fi
-
 ###########
 # Functions
 ###########

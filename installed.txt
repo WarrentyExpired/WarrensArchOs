@@ -1,5 +1,5 @@
 #Pacman
-firefox git github-cli unzip discord eza zoxide fastfestch terminator vlc mpv yazi
+firefox git github-cli unzip discord eza zoxide fastfestch terminator vlc mpv yazi xwaylandsatellite swaybg swayidle blueman slurp
 
 # Install paru
 sudo pacman -S --needed base-devel
@@ -12,4 +12,4 @@ makepkg -si
 #curl -fsSL https://raw.githubusercontent.com/getnf/getnf/main/install.sh | bash
 
 #Aur 
-ironpython3 pokeget getnf caffine-ng
+ironpython3 swaylock-effects getnf caffine-ng bibata-cursor-theme grim tofi swaync

@@ -1,8 +1,8 @@
 @import "colors.css";
 * {
-  padding: 0px;
+  padding-left: 1px;
+  padding-right: 1px;
   margin: 0px;
-  border-radius: 8px;
   font-size: 14px;
   font-family: "JetBrains Mono Nerd Font" ;
   min-height: 0px;
@@ -83,6 +83,7 @@ tooltip {
   color: @text;
   padding-top: 2px;
   padding-bottom: 2px;
+  padding-right: 5px;
 }
 #pulseaudio {
   background-color: @base;

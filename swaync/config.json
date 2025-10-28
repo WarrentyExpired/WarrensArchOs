@@ -1,5 +1,5 @@
 {
-  "$schema": "/etc/xdg/swaync/configSchema.json",
+  "$schema": "/home/warrentyexpired/.config/swaync/configSchema.json",
   "ignore-gtk-theme": true,
   "positionX": "right",
   "positionY": "top",

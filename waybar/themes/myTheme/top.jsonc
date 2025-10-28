@@ -75,7 +75,7 @@
         "tooltip-format-deactivated": "Keep idle inhibitor: Deactivated"
     },
     "custom/distro": {
-        "format" : " NixOS ",
+        "format" : " Arch ",
         "class": "custom-distro",
 		"tooltip": false,
         "on-click": "wlogout",
